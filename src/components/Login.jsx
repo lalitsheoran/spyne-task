@@ -60,6 +60,7 @@ export default class Login extends Component {
         currentPageEmails: findingDetailsOfPage1.data.emails[0],
         currentPageProfileImage: profilePictureOfPage1.request.responseURL,
       };
+
       this.setState({
         page1: dataPage1,
         pageLoaded: true,
@@ -69,7 +70,7 @@ export default class Login extends Component {
         {
           pageLoaded: false,
         },
-        () => new Error(err)
+        () => console.log(err)
       );
     }
   };
